@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AA Rescue Driving School - Enrollment</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+
+<link href="style.css" rel="stylesheet"/></head>
+<body>
+<div class="container">
+<header>
+<div class="header-top">
+<div class="logo">
+<div class="logo-img">
+<svg fill="none" height="70" viewbox="0 0 24 24" width="70" xmlns="http://www.w3.org/2000/svg">
+<circle cx="12" cy="12" r="9" stroke="#c00" stroke-width="2"></circle>
+<path d="M16 12H12M12 12H8M12 12V8M12 12V16" stroke="#c00" stroke-linecap="round" stroke-width="2"></path>
+<path d="M7 17L10 14L14 18L17 15" stroke="#c00" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div class="logo-text">AA Rescue Driving School</div>
+<p class="subtitle">Professional Driving Education Since 2010</p>
+</div>
+<div class="form-id">Form ID: DS-<span id="formId">2025-007-0016</span></div>
+</div>
+<div class="contact-info">
+<i class="fas fa-phone"></i> +234 802 555 1111 | 
+                <i class="fas fa-envelope"></i> info@aarescuenigeria.com
+            </div>
+<div class="progress-container">
+<div class="progress-bar" id="progressBar"></div>
+</div>
+</header>
+<div class="form-content">
+<!-- Enrollment Form -->
+<form id="drivingForm">
+<!-- Branch Selection -->
+<div class="form-section active" id="section1">
+<h2 class="section-title"><i class="fas fa-map-marker-alt"></i> SELECT YOUR BRANCH</h2>
+<div class="form-group">
+<label class="required" for="branch">Nearest Branch</label>
+<select id="branch" name="branch" required="">
+<option value="">-- Select your branch --</option>
+<option value="Ikeja">Ikeja Branch</option>
+<option value="Allen">Allen Branch</option>
+<option value="Abuja 1">Abuja 1 Branch</option>
+<option value="Magodo">Magodo Branch</option>
+<option value="Unilag">Unilag Branch</option>
+<option value="Dolphin Estate">Dolphin Estate Branch</option>
+<option value="Ikota">Ikota Branch</option>
+<option value="Sangotedo">Sangotedo Branch</option>
+<option value="Lekki">Lekki Branch</option>
+<option value="Landmark">Landmark Branch</option>
+<option value="Abuja 2">Abuja 2 Branch</option>
+<option value="Port Harcourt 1">Port Harcourt 1 Branch</option>
+<option value="Port Harcourt 2">Port Harcourt 2 Branch</option>
+<option value="Benin">Benin Branch</option>
+<option value="Kaduna">Kaduna Branch</option>
+<option value="Kano">Kano Branch</option>
+<option value="Akure">Akure Branch</option>
+<option value="Asaba">Asaba Branch</option>
+<option value="Bayelsa">Bayelsa Branch</option>
+<option value="Akwa Ibom">Akwa Ibom Branch</option>
+</select>
+<div class="error-message" id="branch-error">Please select a branch</div>
+</div>
+<div class="btn-container">
+<button class="btn btn-next" id="nextToProgram" type="button">
+                            Next: Select Program <i class="fas fa-arrow-right"></i>
+</button>
+</div>
+</div>
+<!-- Program Selection -->
+<div class="form-section" id="section2">
+<h2 class="section-title"><i class="fas fa-graduation-cap"></i> SELECT YOUR PROGRAM</h2>
+<div class="program-options">
+<div class="program-option" data-program="Bundle Intensive">
+<div class="program-header">
+<span class="program-type">Bundle</span>
+<div class="program-price">₦145,000</div>
+</div>
+<h3 class="program-name"><i class="fas fa-bolt"></i> Intensive Program</h3>
+<ul class="program-features">
+<li><i class="fas fa-check-circle"></i> 5 Weeks Duration</li>
+<li><i class="fas fa-check-circle"></i> 30 Min Sessions</li>
+<li><i class="fas fa-check-circle"></i> Includes License (3 yrs)</li>
+<li><i class="fas fa-check-circle"></i> Mon-Thu Practical + Fri Theory</li>
+</ul>
+</div>
+<div class="program-option" data-program="Bundle Regular">
+<div class="program-header">
+<span class="program-type">Bundle</span>
+<div class="program-price">₦140,000</div>
+</div>
+<h3 class="program-name"><i class="fas fa-calendar-alt"></i> Regular Program</h3>
+<ul class="program-features">
+<li><i class="fas fa-check-circle"></i> 6 Weeks Duration</li>
+<li><i class="fas fa-check-circle"></i> 30 Min Sessions</li>
+<li><i class="fas fa-check-circle"></i> Includes License (3 yrs)</li>
+<li><i class="fas fa-check-circle"></i> 3 Days Practical + Fri Theory</li>
+</ul>
+</div>
+<div class="program-option" data-program="Bundle Weekend">
+<div class="program-header">
+<span class="program-type">Bundle</span>
+<div class="program-price">₦150,000</div>
+</div>
+<h3 class="program-name"><i class="fas fa-calendar-week"></i> Weekend Program</h3>
+<ul class="program-features">
+<li><i class="fas fa-check-circle"></i> 11 Weeks Duration</li>
+<li><i class="fas fa-check-circle"></i> 1 Hour Sessions</li>
+<li><i class="fas fa-check-circle"></i> Includes License (3 yrs)</li>
+<li><i class="fas fa-check-circle"></i> 9 Sat Practical + 2 Sat Theory</li>
+</ul>
+</div>
+<div class="program-option" data-program="Unbundle Intensive">
+<div class="program-header">
+<span class="program-type">Unbundle</span>
+<div class="program-price">₦98,000</div>
+</div>
+<h3 class="program-name"><i class="fas fa-bolt"></i> Intensive Program</h3>
+<ul class="program-features">
+<li><i class="fas fa-check-circle"></i> 5 Weeks Duration</li>
+<li><i class="fas fa-check-circle"></i> 30 Min Sessions</li>
+<li><i class="fas fa-check-circle"></i> No License Included</li>
+<li><i class="fas fa-check-circle"></i> Mon-Thu Practical + Fri Theory</li>
+</ul>
+</div>
+<div class="program-option" data-program="Unbundle Regular">
+<div class="program-header">
+<span class="program-type">Unbundle</span>
+<div class="program-price">₦93,000</div>
+</div>
+<h3 class="program-name"><i class="fas fa-calendar-alt"></i> Regular Program</h3>
+<ul class="program-features">
+<li><i class="fas fa-check-circle"></i> 6 Weeks Duration</li>
+<li><i class="fas fa-check-circle"></i> 30 Min Sessions</li>
+<li><i class="fas fa-check-circle"></i> No License Included</li>
+<li><i class="fas fa-check-circle"></i> 3 Days Practical + Fri Theory</li>
+</ul>
+</div>
+<div class="program-option" data-program="Unbundle Weekend">
+<div class="program-header">
+<span class="program-type">Unbundle</span>
+<div class="program-price">₦103,000</div>
+</div>
+<h3 class="program-name"><i class="fas fa-calendar-week"></i> Weekend Program</h3>
+<ul class="program-features">
+<li><i class="fas fa-check-circle"></i> 11 Weeks Duration</li>
+<li><i class="fas fa-check-circle"></i> 1 Hour Sessions</li>
+<li><i class="fas fa-check-circle"></i> No License Included</li>
+<li><i class="fas fa-check-circle"></i> 9 Sat Practical + 2 Sat Theory</li>
+</ul>
+</div>
+</div>
+<input id="selectedProgram" name="program" required="" type="hidden"/>
+<div class="error-message" id="program-error">Please select a program</div>
+<div class="important-note">
+<h4><i class="fas fa-info-circle"></i> IMPORTANT NOTES</h4>
+<ul>
+<li>Persons under 18 cannot apply for a driver's license</li>
+<li>Fridays are compulsory theory sessions (10AM-12PM)</li>
+<li>All programs include Friday theory classes</li>
+<li>Training must be completed within 3 months of enrollment</li>
+<li>All instructors are certified by the Federal Road Safety Commission</li>
+</ul>
+</div>
+<div class="btn-container">
+<button class="btn btn-prev" id="prevToBranch" type="button">
+<i class="fas fa-arrow-left"></i> Back to Branch
+                        </button>
+<button class="btn btn-next" id="nextToPersonal" type="button">
+                            Next: Personal Info <i class="fas fa-arrow-right"></i>
+</button>
+</div>
+</div>
+<!-- Personal Details -->
+<div class="form-section" id="section3">
+<h2 class="section-title"><i class="fas fa-user"></i> PERSONAL INFORMATION</h2>
+<div class="form-row">
+<div class="form-group">
+<label class="required" for="title">Title</label>
+<select id="title" name="title" required="">
+<option value="">Select Title</option>
+<option value="Mr.">Mr.</option>
+<option value="Mrs.">Mrs.</option>
+<option value="Miss.">Miss.</option>
+<option value="Ms.">Ms.</option>
+<option value="Dr.">Dr.</option>
+</select>
+<div class="error-message" id="title-error">Please select a title</div>
+</div>
+<div class="form-group">
+<label class="required" for="surname">Surname</label>
+<input id="surname" name="surname" required="" type="text"/>
+<div class="error-message" id="surname-error">Please enter your surname</div>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label class="required" for="firstName">First Name</label>
+<input id="firstName" name="firstName" required="" type="text"/>
+<div class="error-message" id="firstName-error">Please enter your first name</div>
+</div>
+<div class="form-group">
+<label for="otherName">Other Name</label>
+<input id="otherName" name="otherName" type="text"/>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label class="required" for="dob">Date of Birth</label>
+<input id="dob" name="dob" required="" type="date"/>
+<div class="error-message" id="dob-error">Please enter your date of birth</div>
+</div>
+<div class="form-group">
+<label class="required" for="gender">Gender</label>
+<select id="gender" name="gender" required="">
+<option value="">Select Gender</option>
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+<option value="Other">Other</option>
+</select>
+<div class="error-message" id="gender-error">Please select your gender</div>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label class="required" for="motherMaiden">Mother's Maiden Name</label>
+<input id="motherMaiden" name="motherMaiden" required="" type="text"/>
+<div class="error-message" id="motherMaiden-error">Please enter mother's maiden name</div>
+</div>
+<div class="form-group">
+<label class="required" for="height">Height</label>
+<input id="height" name="height" placeholder="e.g. 5'10" required="" type="text" value="5'10"/>
+<div class="error-message" id="height-error">Please enter your height</div>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label for="facialMark">Facial Mark (Distinguishing Feature)</label>
+<input id="facialMark" name="facialMark" placeholder="e.g. Mole on left cheek" type="text"/>
+</div>
+<div class="form-group">
+<label class="required" for="licenseClass">License Class</label>
+<select id="licenseClass" name="licenseClass" required="">
+<option value="">Select License Class</option>
+<option value="A (Motorcycle)">Class A (Motorcycle)</option>
+<option value="B (Car)">Class B (Car)</option>
+<option value="C (Light Truck)">Class C (Light Truck)</option>
+<option value="D (Bus)">Class D (Bus)</option>
+<option value="E (Truck)">Class E (Truck)</option>
+</select>
+<div class="error-message" id="licenseClass-error">Please select license class</div>
+</div>
+</div>
+<div class="btn-container">
+<button class="btn btn-prev" id="prevToProgram" type="button">
+<i class="fas fa-arrow-left"></i> Back to Program
+                        </button>
+<button class="btn btn-next" id="nextToContact" type="button">
+                            Next: Contact Info <i class="fas fa-arrow-right"></i>
+</button>
+</div>
+</div>
+<!-- Contact Details -->
+<div class="form-section" id="section4">
+<h2 class="section-title"><i class="fas fa-address-book"></i> CONTACT INFORMATION</h2>
+<div class="form-group">
+<label class="required" for="resAddress">Residential Address</label>
+<input id="resAddress" name="resAddress" required="" type="text"/>
+<div class="error-message" id="resAddress-error">Please enter your address</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label class="required" for="nationality">Nationality</label>
+<input id="nationality" name="nationality" required="" type="text"/>
+<div class="error-message" id="nationality-error">Please enter your nationality</div>
+</div>
+<div class="form-group">
+<label class="required" for="stateOrigin">State of Origin</label>
+<select id="stateOrigin" name="stateOrigin" required="">
+<option value="">Select State</option>
+<option value="Lagos">Lagos</option>
+<option value="Abuja">Abuja</option>
+<option value="Kano">Kano</option>
+<option value="Oyo">Oyo</option>
+<option value="Rivers">Rivers</option>
+<option value="Delta">Delta</option>
+<option value="Ogun">Ogun</option>
+<option value="Kaduna">Kaduna</option>
+<option value="Enugu">Enugu</option>
+<option value="Anambra">Anambra</option>
+<option value="Imo">Imo</option>
+<option value="Edo">Edo</option>
+<option value="Plateau">Plateau</option>
+<option value="Sokoto">Sokoto</option>
+<option value="Borno">Borno</option>
+<option value="Bauchi">Bauchi</option>
+<option value="Akwa Ibom">Akwa Ibom</option>
+<option value="Cross River">Cross River</option>
+<option value="Katsina">Katsina</option>
+<option value="Niger">Niger</option>
+<option value="Benue">Benue</option>
+<option value="Kebbi">Kebbi</option>
+<option value="Adamawa">Adamawa</option>
+<option value="Taraba">Taraba</option>
+<option value="Kogi">Kogi</option>
+<option value="Ekiti">Ekiti</option>
+<option value="Osun">Osun</option>
+<option value="Ondo">Ondo</option>
+<option value="Bayelsa">Bayelsa</option>
+<option value="Gombe">Gombe</option>
+<option value="Nassarawa">Nassarawa</option>
+<option value="Jigawa">Jigawa</option>
+<option value="Yobe">Yobe</option>
+<option value="Zamfara">Zamfara</option>
+<option value="Ebonyi">Ebonyi</option>
+<option value="Kwara">Kwara</option>
+</select>
+<div class="error-message" id="stateOrigin-error">Please select state of origin</div>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label class="required" for="lga">Local Government Area (LGA)</label>
+<input id="lga" name="lga" required="" type="text"/>
+<div class="error-message" id="lga-error">Please enter your LGA</div>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label class="required" for="mobile">Mobile Number</label>
+<input id="mobile" name="mobile" placeholder="08012345678" required="" type="tel"/>
+<div class="error-message" id="mobile-error">Please enter your mobile number</div>
+</div>
+<div class="form-group">
+<label class="required" for="kinPhone">Next of Kin Phone Number</label>
+<input id="kinPhone" name="kinPhone" placeholder="08012345678" required="" type="tel"/>
+<div class="error-message" id="kinPhone-error">Please enter next of kin phone number</div>
+</div>
+</div>
+<div class="form-group">
+<label class="required" for="email">Email Address</label>
+<input id="email" name="email" placeholder="you@example.com" required="" type="email"/>
+<div class="error-message" id="email-error">Please enter a valid email address</div>
+</div>
+<div class="btn-container">
+<button class="btn btn-prev" id="prevToPersonal" type="button">
+<i class="fas fa-arrow-left"></i> Back to Personal Info
+                        </button>
+<button class="btn btn-next" id="nextToTerms" type="button">
+                            Next: Terms &amp; Agreement <i class="fas fa-arrow-right"></i>
+</button>
+</div>
+</div>
+<!-- Terms and Agreement -->
+<div class="form-section" id="section5">
+<h2 class="section-title"><i class="fas fa-file-contract"></i> TERMS &amp; AGREEMENT</h2>
+<div class="important-note">
+<h4><i class="fas fa-exclamation-circle"></i> TERMS AND CONDITIONS</h4>
+<p>By ticking the box below, I confirm that I have read and agree to the following:</p>
+<ul>
+<li>All trainees have a maximum of 3 months to complete training</li>
+<li>All certificates have a 6-month validity period</li>
+<li>I will present myself for lessons in a fit state to drive</li>
+<li>I am responsible for any damage to the vehicle during my lessons</li>
+<li>Payments are valid for 6 months (12 months for pregnancy deferrals)</li>
+<li>All fees are non-refundable once training has commenced</li>
+</ul>
+</div>
+<!-- <div class="terms-agreement">
+<input id="acceptTerms" required="" type="checkbox"/>
+<label class="terms-text required" for="acceptTerms">
+        I have read, understood and agree to the terms and conditions above. 
+        This agreement serves as my digital signature for this enrollment.
+</label>
+</div> -->
+<div class="terms-agreement">
+  <input id="acceptTerms" type="checkbox" required />
+  <label class="terms-text required" for="acceptTerms">
+    I have read, understood and agree to the terms and conditions above. 
+    This agreement serves as my digital signature for this enrollment.
+  </label>
+</div>
+<div class="error-message" id="terms-error">You must accept the terms and conditions</div>
+<div class="btn-container">
+<button class="btn btn-prev" id="prevToContact" type="button">
+<i class="fas fa-arrow-left"></i> Back to Contact Info
+                        </button>
+<button class="btn" id="submitBtn" type="button">
+<i class="fas fa-paper-plane"></i> SUBMIT ENROLLMENT
+</button>
+</div>
+</div>
+</form>
+<!-- Confirmation Message -->
+<div class="confirmation" id="confirmation">
+<div class="confirmation-icon">
+<i class="fas fa-check-circle"></i>
+</div>
+<h2>Enrollment Submitted Successfully!</h2>
+<p>Thank you for enrolling with AA Rescue Driving School.</p>
+<p>We will contact you shortly at the phone number or email you provided.</p>
+<p>Your Form ID: <strong id="confirmationId">DS-2025-0015043</strong></p>
+<p>Please save this ID for future reference.</p>
+<p>For any inquiries, contact us at:</p>
+<p><strong>+234 802 555 1111</strong> or <strong>info@aarescuenigeria.com</strong></p>
+<button class="btn" onclick="window.location.reload()" style="margin-top: 30px;">
+<i class="fas fa-undo"></i> Submit Another Enrollment
+                </button>
+</div>
+</div>
+<footer>
+<p>© 2025 AA Rescue Driving School | All Rights Reserved</p>
+<p>Contact: +234 802 555 1111 | Email: info@aarescuenigeria.com</p>
+</footer>
+</div>
+
+<script src="script.js"></script></body>
+</html>
