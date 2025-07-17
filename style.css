@@ -205,8 +205,8 @@
             font-size: 16px;
             transition: all 0.3s;
             background: white;
-            -webkit-appearance: none;
-            appearance: none;
+            /* -webkit-appearance: none; */
+            /* appearance: none; */
         }
         
         select {
@@ -366,7 +366,17 @@
             margin-right: 10px;
             margin-top: 5px;
         }
-        
+        input[type="checkbox"] {
+            width: 30px;
+            height: 30px;
+            border: 2px solid #555;
+            border-radius: 4px;
+            cursor: pointer;
+            accent-color: #4caf50; 
+            border: 2px solid #555;
+            border-radius: 4px;
+            cursor: pointer;
+        }
         .terms-text {
             font-size: 14px;
             line-height: 1.5;
@@ -435,14 +445,14 @@
             margin-bottom: 20px;
             animation: scaleUp 0.5s ease-out;
         }
-        #acceptTerms {
+        /* #acceptTerms {
         position: relative;
         z-index: 10;
         pointer-events: auto;
-        }
+        } */
 
         .terms-agreement input {
-        pointer-events: auto;
+        /* pointer-events: auto; */
         cursor: pointer;
         }
 
