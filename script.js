@@ -236,6 +236,7 @@
         .then(response => response.text())
         .then(result => {
             console.log("Enrollment saved:", result);
+            console.log(result)
 
             // Optional: show confirmation UI before redirect
             document.getElementById('drivingForm').style.display = 'none';
