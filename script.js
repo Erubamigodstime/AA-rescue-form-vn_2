@@ -180,112 +180,52 @@
         }
         
         // Submit form
-        // function submitForm() {
-        //     try {
-        //         // Create enrollment object
-        //         const enrollment = {
-        //             formId: document.getElementById('formId').textContent,
-        //             branch: document.getElementById('branch').value,
-        //             program: document.getElementById('selectedProgram').value,
-        //             title: document.getElementById('title').value,
-        //             surname: document.getElementById('surname').value,
-        //             firstName: document.getElementById('firstName').value,
-        //             otherName: document.getElementById('otherName').value || 'N/A',
-        //             dob: document.getElementById('dob').value,
-        //             gender: document.getElementById('gender').value,
-        //             motherMaiden: document.getElementById('motherMaiden').value,
-        //             height: document.getElementById('height').value,
-        //             facialMark: document.getElementById('facialMark').value || 'N/A',
-        //             licenseClass: document.getElementById('licenseClass').value,
-        //             resAddress: document.getElementById('resAddress').value,
-        //             nationality: document.getElementById('nationality').value,
-        //             stateOrigin: document.getElementById('stateOrigin').value,
-        //             lga: document.getElementById('lga').value,
-        //             mobile: document.getElementById('mobile').value,
-        //             kinPhone: document.getElementById('kinPhone').value,
-        //             email: document.getElementById('email').value,
-        //             timestamp: new Date().toISOString(),
-        //             price: programPrices[document.getElementById('selectedProgram').value] || 0
-        //         };
-                
-        //         // Show loading state
-        //         const submitBtn = document.getElementById('submitBtn');
-        //         submitBtn.innerHTML = '<span class="spinner"></span> Processing...';
-        //         submitBtn.disabled = true;
-                
-        //         // Save to Google Sheets (simulated)
-        //         setTimeout(() => {
-        //             console.log('Enrollment data:', enrollment);
-                    
-        //             // Show confirmation
-        //             document.getElementById('drivingForm').style.display = 'none';
-        //             document.getElementById('confirmation').style.display = 'block';
-        //         }, 1500);
-        //         // Generate payment reference
-        //         const paymentRef = "AA-DRIVE-" + Math.floor(100000 + Math.random() * 900000);
-
-        //         // Store it for later
-        //         localStorage.setItem("paymentRef", paymentRef);
-
-        //         // Redirect to Paystack with metadata
-        //         window.location.href = `https://paystack.com/pay/aarescuenigeria?reference=${paymentRef}&email=${enrollment.email}`;
-
-                
-        //     } catch (error) {
-        //         console.error("Error submitting form:", error);
-        //         alert("Error submitting enrollment. Please try again.");
-        //         submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> SUBMIT ENROLLMENT';
-        //         submitBtn.disabled = false;
-        //     }
-        // }
-
-
         function submitForm() {
-    try {
-        // Create enrollment object
-        const enrollment = {
-            formId: document.getElementById('formId').textContent,
-            branch: document.getElementById('branch').value,
-            program: document.getElementById('selectedProgram').value,
-            title: document.getElementById('title').value,
-            surname: document.getElementById('surname').value,
-            firstName: document.getElementById('firstName').value,
-            otherName: document.getElementById('otherName').value || 'N/A',
-            dob: document.getElementById('dob').value,
-            gender: document.getElementById('gender').value,
-            motherMaiden: document.getElementById('motherMaiden').value,
-            height: document.getElementById('height').value,
-            facialMark: document.getElementById('facialMark').value || 'N/A',
-            licenseClass: document.getElementById('licenseClass').value,
-            resAddress: document.getElementById('resAddress').value,
-            nationality: document.getElementById('nationality').value,
-            stateOrigin: document.getElementById('stateOrigin').value,
-            lga: document.getElementById('lga').value,
-            mobile: document.getElementById('mobile').value,
-            kinPhone: document.getElementById('kinPhone').value,
-            email: document.getElementById('email').value,
-            timestamp: new Date().toISOString(),
-            price: programPrices[document.getElementById('selectedProgram').value] || 0
-        };
+        try {
+            // Create enrollment object
+            const enrollment = {
+                formId: document.getElementById('formId').textContent,
+                branch: document.getElementById('branch').value,
+                program: document.getElementById('selectedProgram').value,
+                title: document.getElementById('title').value,
+                surname: document.getElementById('surname').value,
+                firstName: document.getElementById('firstName').value,
+                otherName: document.getElementById('otherName').value || 'N/A',
+                dob: document.getElementById('dob').value,
+                gender: document.getElementById('gender').value,
+                motherMaiden: document.getElementById('motherMaiden').value,
+                height: document.getElementById('height').value,
+                facialMark: document.getElementById('facialMark').value || 'N/A',
+                licenseClass: document.getElementById('licenseClass').value,
+                resAddress: document.getElementById('resAddress').value,
+                nationality: document.getElementById('nationality').value,
+                stateOrigin: document.getElementById('stateOrigin').value,
+                lga: document.getElementById('lga').value,
+                mobile: document.getElementById('mobile').value,
+                kinPhone: document.getElementById('kinPhone').value,
+                email: document.getElementById('email').value,
+                timestamp: new Date().toISOString(),
+                price: programPrices[document.getElementById('selectedProgram').value] || 0
+            };
 
-        // Generate payment reference
-        const paymentRef = "AA-DRIVE-" + Math.floor(100000 + Math.random() * 900000);
-        enrollment.paymentRef = paymentRef;
+            // Generate payment reference
+            const paymentRef = "AA-DRIVE-" + Math.floor(100000 + Math.random() * 900000);
+            enrollment.paymentRef = paymentRef;
 
-        console.log(`This the payment ref ${paymentRef}`)
+            console.log(`This the payment ref ${paymentRef}`)
 
-        // Show loading state
-        const submitBtn = document.getElementById('submitBtn');
-        submitBtn.innerHTML = '<span class="spinner"></span> Processing...';
-        submitBtn.disabled = true;
+            // Show loading state
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.innerHTML = '<span class="spinner"></span> Processing...';
+            submitBtn.disabled = true;
 
-        // Store ref locally
-        localStorage.setItem("paymentRef", paymentRef);
-        localStorage.setItem("formId", enrollment.formId);
+            // Store ref locally
+            localStorage.setItem("paymentRef", paymentRef);
+            localStorage.setItem("formId", enrollment.formId);
 
-        console.log(`This the enrollment data ${enrollment}`)
+            console.log(`This the enrollment data ${enrollment}`)
 
-        // Send to Google Sheets
+            // Send to Google Sheets
         fetch("https://script.google.com/macros/s/AKfycbzSPrWFQOhKgKj89scw6iQZ-yIg-89aDCbt2_zOKgF7byjbe5uo5ORwWTgL-C-7czxUVg/exec", {
             method: "POST",
             headers: {
