@@ -226,7 +226,7 @@
             console.log(`This the enrollment data ${enrollment}`)
 
             // Send to Google Sheets
-        fetch("https://script.google.com/macros/s/AKfycbzSPrWFQOhKgKj89scw6iQZ-yIg-89aDCbt2_zOKgF7byjbe5uo5ORwWTgL-C-7czxUVg/exec", {
+        fetch("https://script.google.com/macros/s/AKfycbyAai_oPYkQuMkJCQT9fNwP0vY4l5WNlxiaaYUWq0cHAi0M3TuTL5475NN1s7d95fuZ/exec", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
