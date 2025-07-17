@@ -231,6 +231,7 @@
             headers: {
                 "Content-Type": "application/json",
             },
+            mode: "no-cors" ,
             body: JSON.stringify(enrollment)
         })
         .then(response => response.text())
